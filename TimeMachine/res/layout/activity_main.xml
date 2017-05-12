@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="760dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewTriger"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Triger:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextTriger"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="6" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewMs1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="s"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewRelease"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Release:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextRelease"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="6" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewMs2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="s"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextTotal"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="6" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewCounter"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Counter:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextCounter"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="6"
+            android:text="0" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewUpdated"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Updated: "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextUpdated"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:lines="1"
+            android:text="N/A" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewFinish"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Finish: "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextFinish"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:lines="1"
+            android:text="N/A" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendStart"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/buttonStop"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendStop"
+            android:text="Stop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendCancel"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/buttonQuery"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendQuery"
+            android:text="Query" />
+    </LinearLayout>
+
+</LinearLayout>

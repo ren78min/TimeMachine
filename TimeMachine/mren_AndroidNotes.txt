@@ -1,0 +1,35 @@
+
+- Project folders
+src contains source code,
+gen is generated/managed by the sdk,
+res contains resources such as UI definitions, logos, pictures, etc.
+
+- Project manifest AndroidManifest.xml
+that defines basic properties of the project,
+including minSdkVersion, targetSdkVersion, permissions, etc.
+
+- Start
+In AndroidManifest.xml,
+element "application > activity > intent-filter" which has 
+<action android:name="android.intent.action.MAIN" />
+and
+<category android:name="android.intent.category.LAUNCHER" />
+will be launched as the main activity of the program.
+
+In the main activity,
+load UI by calling setContentView(R.layout.activity_main),
+where activity_main is the UI definition.
+
+- Application components
+Activity provides a UI, so that user can do something.
+Intent is a messaging object used to request an action from another app component (such as start an Activity).
+Service can perform long-running operations in the background and does not provide a UI.
+Content providers manage access to a structured set of data.
+
+Toast shows information to user without interaction.
+// TODO Message Handler
+
+// TODO Life cycles
+
+- Test
+Create a test project based
